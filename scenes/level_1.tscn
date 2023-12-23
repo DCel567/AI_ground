@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmak2dsbjjmoh"]
+[gd_scene load_steps=3 format=3 uid="uid://cmak2dsbjjmoh"]
 
 [ext_resource type="Texture2D" uid="uid://dhu4v4uk8dvtr" path="res://graphics/background.png" id="1_jp5vr"]
+[ext_resource type="PackedScene" uid="uid://cfuwig4uo7um" path="res://npc/Follower.tscn" id="2_22c5m"]
 
 [node name="level_1" type="Node2D"]
 
@@ -10,3 +11,6 @@ texture = ExtResource("1_jp5vr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
+
+[node name="Follower" parent="." instance=ExtResource("2_22c5m")]
+position = Vector2(262, 239)

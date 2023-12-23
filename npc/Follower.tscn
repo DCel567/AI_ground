@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfuwig4uo7um"]
+
+[ext_resource type="Texture2D" uid="uid://jquudfpneamj" path="res://graphics/girl.png" id="1_nuj3s"]
+[ext_resource type="Script" path="res://npc/Follower.gd" id="1_pgntb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l20jc"]
+radius = 19.0
+height = 74.0
+
+[node name="Follower" type="CharacterBody2D"]
+script = ExtResource("1_pgntb")
+
+[node name="Girl" type="Sprite2D" parent="."]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_nuj3s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -3)
+shape = SubResource("CapsuleShape2D_l20jc")
